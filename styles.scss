@@ -546,6 +546,7 @@ body {
 @media (max-width: 1028px) {
   html {
     font-size: 50%;
+
   }
 
   #header {
@@ -588,12 +589,17 @@ body {
     }
   }
 
+  #home{
+    overflow: hidden;
+width: 100%;
+  }
+
   #about {
     .image {
       text-align: center;
 
       img {
-        width: 70vw;
+        width: 100%;
       }
     }
   }
