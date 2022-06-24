@@ -403,7 +403,7 @@ body {
       textarea {
         outline: none;
         border: 0.2rem solid #333;
-        border-radius: 0.2rem;
+        border-radius: 10px;
         margin: 2rem 0;
         padding: 0 1rem;
         background: none;
@@ -547,7 +547,8 @@ body {
   transform: skew(-180deg) rotate(-180deg);
 }
 // media queries //
-@media only screen and (min-device-width: 768px) and (max-device-width: 1028px) and (-webkit-min-device-pixel-ratio: 2) {
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 1028px) {
   html {
     font-size: 50%;
   }
@@ -569,7 +570,8 @@ body {
   #header {
     .fa-hamburger {
       display: block;
-      font-size: 7rem;
+      padding: 6rem 4rem;
+
     }
 
     nav {
@@ -589,7 +591,7 @@ body {
           margin: 2rem 0;
 
           a {
-            font-size: 3.5rem;
+            font-size: 3rem;
             border-radius: 5rem;
 
             &:hover {
@@ -619,17 +621,33 @@ body {
 
     .row {
       .content {
-        transform: scale(1.9);
-        width: 40%;
-        margin-left: 25%;
+        width: 60%;
+        h1{
+          font-size: 10rem;
+          width: 120%;
+        }
+        h2{
+          font-size: 7.5rem;
+        }
+        p{
+          font-size: 5rem;
+          width: 105%;
+        }
+        a{
+          button{
+            width: 35rem;
+            height: 10rem;
+            font-size: 4.8rem;
+          }
+        }
       }
 
       .controls {
         margin-left: 40%;
 
         .dots {
-          height: 3rem;
-          width: 3rem;
+          height: 4rem;
+          width: 4rem;
           margin: 0 2rem;
         }
       }
@@ -638,27 +656,59 @@ body {
 
   #special {
     min-height: 80rem;
+    .heading{
+      h1{
+        font-size: 8rem;
+      }
+      p{
+        font-size: 4rem;
+      }
+    }
 
     .card-container {
       width: 75%;
+      display: flex;
+      flex-direction: 5%;
       margin-bottom: 5%;
 
       .card {
-        margin: 20% 7rem 7rem;
+        width: 100%;
+        height: auto;
+        p{
+          font-size: 4rem;
+        }
+        a{
+          button{
+            font-size: 4.5rem;
+            height: 12rem;
+            width: 33rem;
+          }
+        }
       }
+
     }
   }
 
   #about {
+    .heading{
+      h1{
+        font-size: 8rem;
+      }
+    }
     .row {
       .content {
         p {
-          font-size: 2.5rem;
+          font-size: 4.5rem;
           font-weight: 600;
-          margin-left: 8%;
-          width: 80%;
           height: 60%;
           max-width: 1000px;
+        }
+        a{
+          button{
+            font-size: 4rem;
+            height: 9rem;
+            width: 38rem;
+          }
         }
       }
 
@@ -675,20 +725,51 @@ body {
   }
 
   #dish {
+    padding-top: 10%;
+    padding-bottom: 120%;
+    .heading{
+      h1{
+        font-size: 8rem;
+      }
+    }
     .box-container {
-      padding-top: 10%;
+      padding-top: 100%;
+      transform: scale(1.5);
 
       .box {
         margin-top: 10%;
-        width: 60%;
-        height: 35rem;
+        width: 500px;
+        height: 500px;
         border-radius: 17px;
+        .info{
+          transform: scale(1);
+          h3{
+            font-size: 10rem;
+          }
+          p{
+            font-size: 4rem;
+          }
+          a{
+            padding-top: 2%;
+
+            button{
+              font-size: 4rem;
+              height: 9rem;
+              width: 30rem;
+            }
+          }
+        }
       }
     }
   }
 
   #contact {
     min-height: 100em;
+    .heading{
+      h1{
+        font-size: 8rem;
+      }
+    }
 
     .row {
       padding-top: 5%;
@@ -696,18 +777,92 @@ body {
       form {
         width: 100%;
         height: 120%;
+        input[type='submit']{
+          font-size: 4rem;
+          height: 7rem;
+          width: 25rem;
+        }
+        .inputBox{
+          input{
+            height: 6rem;
+
+          }
+          h3{
+            font-size: 3.7rem;
+            top: 2.5rem;
+
+          }
+          textarea{
+            font-size: 4rem;
+          }
+          input, textarea{
+            &:focus ~ h3,
+            &:valid ~ h3 {
+              font-size: 3.7rem;
+              left: 6%;
+              top: -2.3rem;
+              color: #ff3300;
+            }
+          }
+        }
       }
     }
   }
+
+  #footer{
+    .row{
+      .brand{
+        .logo{
+          img{
+            height: 12rem;
+          }
+        }
+        .icons{
+          a{
+            font-size: 5rem;
+          }
+        }
+      }
+      .footer-links{
+        h3{
+          font-size: 5rem;
+        }
+        a{
+          font-size: 3.5rem;
+        }
+      }
+      .text-center{
+        h2{
+          font-size: 4rem;
+        }
+        input[type="text"]{
+          height: 6rem;
+          width: 25rem;
+          font-size: 4rem;
+        }
+        input[type="submit"]{
+          font-size: 3.5rem;
+          margin-top: 3%;
+          height: 7rem;
+          width: 26rem;
+          margin-left: 0;
+        }
+      }
+    }
+    h1{
+      font-size: 4rem;
+    }
+  }
 }
-@media only screen and (min-device-width: 390px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 2) {
+
+
+@media (min-width: 280px) and (max-width: 1028px) {
 
   html {
     overflow-x: hidden;
   }
 
   .heading {
-    transform: scale(1.7);
     overflow: hidden;
     width: 50%;
     margin: auto;
@@ -723,7 +878,7 @@ body {
   #header {
     .fa-hamburger {
       display: block;
-      font-size: 7rem;
+      font-size: 8rem;
     }
 
     nav {
@@ -743,7 +898,7 @@ body {
           margin: 2rem 0;
 
           a {
-            font-size: 3.5rem;
+            font-size: 4.5rem;
             border-radius: 5rem;
 
             &:hover {
@@ -754,7 +909,10 @@ body {
           }
         }
       }
+
+
     }
+    .fas{}
 
     .logo {
       img {
@@ -768,15 +926,27 @@ body {
   }
 
 
+  #home{
+    .row{
+      .content{
+      }
+    }
+  }
+
+
   #special {
     height: auto;
     padding-bottom: 5%;
+
+    .heading{
+      font-size: 7rem;
+    }
   }
 
   #about {
     .image {
       img {
-        width: 65rem;
+        width: 100%;
       }
     }
 
@@ -789,7 +959,6 @@ body {
 
     .heading{
       h1{
-        margin-top: -10rem;
         padding-bottom: 5%;
       }
     }
